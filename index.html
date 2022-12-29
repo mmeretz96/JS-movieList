@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Movie List</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1 class="title">My Movielist</h1>
+    <div class="addMovie"><img src="icons/plus.png" alt=""></div>
+  </header>
+  <div class="main">
+    <form class="hidden movieForm">
+      <div class="input-pair">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+      </div>
+      <div class="input-pair">
+        <label for="director">Director:</label>
+        <input type="text" id="director" name="director" required>
+      </div>
+      <div class="input-pair">
+        <label for="length">Length (in minutes):</label>
+        <input type="number" id="length" name="length" required>
+      </div>
+      <div class="input-pair">
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" accept="image/png, image/jpeg">
+      </div>
+        <div class="input-pair">
+          <label for="watched">Mark as watched</label>
+          <input type="checkbox" id="watched" name="watched" >
+        </div>
+        <input type="submit" value="Submit" id="formSubmit">
+    </form> 
+    <div class="movies"></div>
+  </div>
+</body>
+</html>
