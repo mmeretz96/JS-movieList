@@ -253,3 +253,23 @@ input[type="submit"]:hover {
   width: 150px;
   object-fit: cover;
 }
+
+
+@media only screen and (max-width: 600px) {
+  header{
+    padding: 0 1em;
+  }
+
+  .main{
+    padding: 1em 1em;
+  }
+
+  .movie{
+    flex-wrap: wrap;
+  }
+  
+  .controls{
+    width: 100%;
+    gap: 1em;
+  }
+}
