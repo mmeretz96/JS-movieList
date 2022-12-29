@@ -147,7 +147,13 @@ form.addEventListener("submit", e => {
   
   console.log(form)
   const formData = new FormData(form)
-  addMovie(new Movie(formData.get("title"),formData.get("director"),formData.get("length"),formData.get("watched"), URL.createObjectURL(formData.get("image"))))
+  let img = formData.get("image")
+  if(img.size == 0){
+    img = null
+  }else{
+    img = URL.createObjectURL(img)
+  }
+  addMovie(new Movie(formData.get("title"),formData.get("director"),formData.get("length"),formData.get("watched"), img))
   showMovies()
   toggleForm()
 })
